@@ -9,8 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      session[:user_id] = @user.id
-      redirect_to new_user_path, notice: 'Registration successful!'
+      session[:id] = @user.id
+      redirect_to products_path
     else
       redirect_to users_path
     end
