@@ -17,7 +17,11 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
   end
 
+  resource :sessions, only: [:new, :create, :destroy]
+
   resources :users, only: [:new, :create]
+
+
 
 
 
