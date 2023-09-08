@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       session[:id] = @user.id
       redirect_to products_path
     else
-      redirect_to users_path
+      render new
     end
 
   end
