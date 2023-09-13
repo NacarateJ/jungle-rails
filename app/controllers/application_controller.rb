@@ -6,6 +6,16 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def current_user
+    @current_user ||= User.find_by_id(session[:id]) if session[:id]
+  end
+
+  helper_method :current_user
+
+  def authorize
+    redirect_to new_sessions_path unless current_user
+  end
+
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
   end
