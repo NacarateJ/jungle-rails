@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1
 
 ## Setup
 
@@ -22,6 +22,16 @@ If Rails is complaining about authentication to the database, uncomment the user
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
+## Tests
+- rspec: run `bin/rspec`
+- Cypress:
+  - Terminal 1: run `bin/rails s -b 0.0.0.0 -e test`
+  - Terminal 2: run `bin/rails cypress:open`
+
+## Admin Auth Credentials
+username: Jungle
+password: book
 
 ## Dependencies
 
