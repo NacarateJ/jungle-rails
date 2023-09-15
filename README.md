@@ -30,8 +30,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
   - Terminal 2: run `bin/rails cypress:open`
 
 ## Admin Auth Credentials
-username: Jungle
-password: book
+- username: Jungle
+- password: book
 
 ## Dependencies
 
